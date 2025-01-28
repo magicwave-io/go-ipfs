@@ -1,0 +1,93 @@
+# Go
+# Build your Go project.
+# Add steps that test, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/go
+#resources:
+#  repositories:
+#  - repository: Go_Bitswap
+#    type: git
+#    name: PaidPiper/go-bitswap
+#  - repository: Go_Ipfs_Config
+#    type: git
+#    name: PaidPiper/go-ipfs-config
+#  - repository: Go_Libp2p
+#    type: git
+#    name: PaidPiper/go-libp2p
+#  - repository: Go_Libp2p_Core
+#    type: git
+#    name: PaidPiper/go-libp2p-core
+#  - repository: Go_Libp2p_Onion_Transport
+#    type: git
+#    name: PaidPiper/go-libp2p-onion-transport
+#  - repository: Go_Libp2p_Swarm
+#    type: git
+#    name: PaidPiper/go-libp2p-swarm
+#  - repository: Go_Multiaddr
+#    type: git
+#    name: PaidPiper/go-multiaddr
+#  - repository: Go_Multiaddr_Net
+#    type: git
+#    name: PaidPiper/go-multiaddr-net
+#
+trigger:
+- master
+#
+pool:
+  name: 'Ubuntu_Pool'
+
+steps:
+- script:
+    echo 'This is a placeholder!'
+  displayName: 'This is a placeholder!'
+
+#- checkout: self
+#- checkout: Go_Bitswap
+#- checkout: Go_Ipfs_Config
+#- checkout: Go_Libp2p
+#- checkout: Go_Libp2p_Core
+#- checkout: Go_Libp2p_Onion_Transport
+#- checkout: Go_Libp2p_Swarm
+#- checkout: Go_Multiaddr
+#- checkout: Go_Multiaddr_Net
+#
+#- script: |
+#    go version
+#    go env
+#  displayName: 'Checking Go installation'
+#  
+#- script: |
+#    go test -v | true
+#  workingDirectory: $(Build.SourcesDirectory)/go-ipfs/cmd/ipfs
+#  displayName: 'Running all the cmd tests'
+#  
+#- script: |
+#    go build -v
+#  workingDirectory: $(Build.SourcesDirectory)/go-ipfs/cmd/ipfs
+#  displayName: 'Building Go Ipfs'
+#
+#- task: ArchiveFiles@2
+#  inputs:
+#    rootFolderOrFile: '$(Build.SourcesDirectory)/go-ipfs/cmd/ipfs/ipfs'
+#    includeRootFolder: true
+#    archiveType: '7z'
+#    sevenZipCompression: 'ultra'
+#    archiveFile: '$(Build.ArtifactStagingDirectory)/ipfs-$(Build.BuildId).7z'
+#    replaceExistingArchive: true
+#    verbose: true
+#
+#- task: ArchiveFiles@2
+#  inputs:
+#    rootFolderOrFile: '$(Build.SourcesDirectory)/go-ipfs/cmd/ipfs/ipfs'
+#    includeRootFolder: true
+#    archiveType: '7z'
+#    sevenZipCompression: 'ultra'
+#    archiveFile: '$(Build.ArtifactStagingDirectory)/ipfs-latest.7z'
+#    replaceExistingArchive: true
+#    verbose: true
+#
+#- task: PublishBuildArtifacts@1
+#  inputs:
+#    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+#    ArtifactName: 'ipfs'
+#    publishLocation: 'Container'
+#

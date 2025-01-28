@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ipfs command" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="go-ipfs" />
+    <working_directory value="$PROJECT_DIR$/" />
+    <go_parameters value="-asmflags=all='-trimpath=$GOPATH$' -gcflags=all='-trimpath=$GOPATH$' -o &quot;cmd/ipfs/ipfs.exe&quot;" />
+    <kind value="PACKAGE" />
+    <filePath value="$PROJECT_DIR$/" />
+    <package value="paidpiper/ipfs/go-ipfs/cmd/ipfs" />
+    <directory value="$PROJECT_DIR$/" />
+    <output_directory value="$PROJECT_DIR$/cmd/ipfs" />
+    <method v="2" />
+  </configuration>
+</component>
